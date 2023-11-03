@@ -8,5 +8,5 @@ frontViewButton.addEventListener('click', () => {
 });
 
 topViewButton.addEventListener('click', () => {
-  building.style.transform = 'rotateX(-90deg) rotateY(0deg)';
+  building.style.transform = 'rotateX(-60deg) rotateY(0deg)';
 });
