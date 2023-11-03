@@ -1,17 +1,23 @@
 /* styles.css */
 body {
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 100vh;
     margin: 0;
   }
   
   .container {
-    position: relative;
-    perspective: 500px;
-    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
   }
   
   .building {
@@ -30,8 +36,13 @@ body {
     padding: 10px;
     margin: 5px;
     text-align: center;
-    font-weight: bold;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .room:hover {
+    background-color: #ffaaaa;
   }
   
   .garden {
@@ -48,6 +59,12 @@ body {
     padding: 10px;
     margin: 5px;
     text-align: center;
-    font-weight: bold;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .playground:hover,
+  .relaxation-area:hover {
+    background-color: #77dd77;
   }  
