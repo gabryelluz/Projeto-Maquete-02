@@ -1,70 +1,62 @@
-/* styles.css */
 body {
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    margin: 0;
-    perspective: 800px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    overflow: hidden;
-    width: 500px;
-    transform-style: preserve-3d;
-    animation: spin 20s linear infinite;
-  }
-  
-  .building {
-    background-color: #e0e0e0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    transform: rotateX(20deg) rotateY(30deg);
-  }
-  
-  .room {
-    background-color: #f8c2c2;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 15px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .garden {
-    background-color: #c2e7b0;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .playground,
-  .relaxation-area {
-    background-color: #a4d78c;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 15px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotateX(20deg) rotateY(30deg);
-    }
-    100% {
-      transform: rotateX(20deg) rotateY(390deg);
-    }
-  }
-  
+    height: 100vh;
+    background-color: #87CEEB; /* Cor de fundo simulando o céu */
+}
+
+.scene {
+    position: relative;
+    width: 400px; /* Largura da maquete */
+    height: 250px; /* Altura da maquete */
+    perspective: 1000px; /* Definindo a perspectiva para o efeito 3D */
+}
+
+.building {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    transform: rotateY(30deg); /* Rotacionando a construção para um ângulo visível */
+    background-color: #E4A857; /* Cor simulando a construção */
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 80px solid #C42D2D; /* Cor simulando o telhado */
+}
+
+.walls {
+    width: 200px;
+    height: 70px;
+    background-color: #B79657; /* Cor simulando as paredes */
+    position: absolute;
+    bottom: 0;
+}
+
+.window {
+    width: 40px;
+    height: 40px;
+    background-color: #8CA2A3; /* Cor simulando a janela */
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.door {
+    width: 50px;
+    height: 100px;
+    background-color: #4A90E2; /* Cor simulando a porta */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.people {
+    /* Adicione estilos para representar as pessoas na maquete */
+}
